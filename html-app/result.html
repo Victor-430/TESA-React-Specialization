@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Submission Result</title>
+</head>
+<body>
+    <nav>
+        <img src="Univaciti.png" alt="Univaciti logo" class="univaciti">
+    </nav>
+
+    <main class="main-content">
+        <div class="card result-card">
+
+            <div class="card-header">
+                <h1>Submission Successful</h1>
+            </div>
+
+            <div class="result-list">
+                <div class="result-item">
+                    <strong>Name:</strong>
+                    <span id="result-name">-</span>
+                </div>
+                <div class="result-item">
+                    <strong>Email:</strong>
+                    <span id="result-email">-</span>
+                </div>
+                <div class="result-item">
+                    <strong>Role:</strong>
+                    <span id="result-role">-</span>
+                </div>
+            </div>
+
+            <div class="action-container">
+                <a href="index.html" class="btn btn-secondary">← Back to Form</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 React Foundation.</p>
+    </footer>
+
+    <script>
+        // Retrieve parameters from URL query string
+        const params = new URLSearchParams(window.location.search);
+
+        const name = params.get('name');
+        const email = params.get('email');
+        const role = params.get('role') || params.get('specialization');
+
+        // Display submitted details
+        if (name) {
+            document.getElementById('result-name').textContent = name;
+        }
+        if (email) {
+            document.getElementById('result-email').textContent = email;
+        }
+        if (role) {
+            const roleEl = document.getElementById('result-role') || document.getElementById('result-specialization');
+            if (roleEl) {
+                roleEl.textContent = role;
+            }
+        }
+    </script>
+</body>
+</html>
