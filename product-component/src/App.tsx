@@ -1,3 +1,4 @@
+import { BadCounter } from "./components/BadCounter";
 import { ProductCard } from "./components/ProductCard";
 
 export const App = () => {
@@ -12,6 +13,8 @@ export const App = () => {
       <nav>
         <img src="/Univaciti.png" alt="Univaciti logo" className="univaciti" />
       </nav>
+
+      <BadCounter />
 
       <div className="grid">
         {ProductList.map((product, index) => (
