@@ -13,7 +13,7 @@ export const FormField = ({
   placeholder,
   autoComplete,
   required = false,
-  endAdornment,
+  endAdornments,
   inputClassName,
 }: FormFieldProps) => {
   const [field, meta] = useField(name);
@@ -39,11 +39,11 @@ export const FormField = ({
             aria-invalid={hasError}
             className={cn(
               "px-4 text-black placeholder:text-muted-foreground",
-              endAdornment && "pr-11",
+              endAdornments && "pr-11",
               inputClassName
             )}
           />
-          {endAdornment}
+          {endAdornments}
         </div>
       </div>
       <AnimatePresence mode="wait">

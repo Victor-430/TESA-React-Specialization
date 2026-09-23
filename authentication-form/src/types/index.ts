@@ -23,7 +23,7 @@ export interface FormFieldProps {
   placeholder?: string;
   autoComplete?: string;
   required?: boolean;
-  endAdornment?: React.ReactNode;
+  endAdornments?: React.ReactNode;
   inputClassName?: string;
 }
 

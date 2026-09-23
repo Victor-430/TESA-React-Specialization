@@ -32,7 +32,7 @@ export const PasswordField = ({
       placeholder={placeholder}
       autoComplete={autoComplete}
       required={required}
-      endAdornment={toggleButton}
+      endAdornments={toggleButton}
     />
   );
 };
