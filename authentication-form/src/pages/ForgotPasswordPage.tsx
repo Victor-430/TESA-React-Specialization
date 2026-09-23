@@ -6,16 +6,13 @@ import { AuthLayout } from "@/layouts/AuthLayout";
 import { FormField } from "@/components/FormField";
 import { SubmitButton } from "@/components/SubmitButton";
 import { forgotPasswordSchema } from "@/lib/validations";
-
-interface ForgotPasswordValues {
-  email: string;
-}
+import type { ForgotPasswordValues } from "@/types";
 
 const initialValues: ForgotPasswordValues = {
   email: "",
 };
 
-function ForgotPasswordPage() {
+export const ForgotPasswordPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (values: ForgotPasswordValues) => {
@@ -64,7 +61,4 @@ function ForgotPasswordPage() {
       </Formik>
     </AuthLayout>
   );
-}
-
-export default ForgotPasswordPage;
-
+};

@@ -2,31 +2,18 @@ import { Link } from "react-router";
 import { motion } from "framer-motion";
 
 import { Logo } from "@/components/Logo";
+import type { AuthLayoutProps } from "@/types";
 
-interface AuthLayoutProps {
-  heading: string;
-  subtitle: string;
-  children: React.ReactNode;
-  footerText?: string;
-  footerLinkText?: string;
-  footerLinkHref?: string;
-  maxWidth?: string;
-  backLink?: {
-    text: string;
-    href: string;
-  };
-}
-
-function AuthLayout({
+export const AuthLayout = ({
   heading,
   subtitle,
   children,
   footerText,
   footerLinkText,
   footerLinkHref,
-  backLink,
   maxWidth = "max-w-[80%]",
-}: AuthLayoutProps) {
+  backLink,
+}: AuthLayoutProps) => {
   return (
     <div className="grid min-h-screen place-items-center bg-white px-5 text-foreground">
       <section className="mx-auto flex w-full max-w-xl flex-col items-center py-12">
@@ -79,6 +66,4 @@ function AuthLayout({
       </section>
     </div>
   );
-}
-
-export { AuthLayout };
+};

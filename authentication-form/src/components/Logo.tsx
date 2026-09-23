@@ -1,10 +1,7 @@
 import { cn } from "@/lib/utils";
+import type { LogoProps } from "@/types";
 
-interface LogoProps {
-  className?: string;
-}
-
-function Logo({ className }: LogoProps) {
+export const Logo = ({ className }: LogoProps) => {
   return (
     <span
       className={cn("relative block text-foreground size-24", className)}
@@ -22,7 +19,4 @@ function Logo({ className }: LogoProps) {
       </span>
     </span>
   );
-}
-
-export { Logo };
-
+};

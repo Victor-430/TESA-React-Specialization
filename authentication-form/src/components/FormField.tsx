@@ -4,19 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import type { FormFieldProps } from "@/types";
 
-interface FormFieldProps {
-  label: string;
-  name: string;
-  type?: string;
-  placeholder?: string;
-  autoComplete?: string;
-  required?: boolean;
-  endAdornment?: React.ReactNode;
-  inputClassName?: string;
-}
-
-function FormField({
+export const FormField = ({
   label,
   name,
   type = "text",
@@ -25,7 +15,7 @@ function FormField({
   required = false,
   endAdornment,
   inputClassName,
-}: FormFieldProps) {
+}: FormFieldProps) => {
   const [field, meta] = useField(name);
   const hasError = meta.touched && !!meta.error;
 
@@ -33,7 +23,7 @@ function FormField({
     <div className="space-y-1.5">
       <Label
         htmlFor={name}
-        className="font-normal  text-foreground"
+        className="font-normal text-foreground"
       >
         {label}
         {required && <span className="ml-1 text-destructive">*</span>}
@@ -71,8 +61,6 @@ function FormField({
       </AnimatePresence>
     </div>
   );
-}
+};
 
-export { FormField };
 export type { FormFieldProps };
-

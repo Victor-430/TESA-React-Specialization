@@ -2,20 +2,15 @@ import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
 import { FormField } from "@/components/FormField";
-import type { FormFieldProps } from "@/components/FormField";
+import type { PasswordFieldProps } from "@/types";
 
-type PasswordFieldProps = Omit<
-  FormFieldProps,
-  "type" | "endAdornment" | "inputClassName"
->;
-
-function PasswordField({
+export const PasswordField = ({
   label,
   name,
   placeholder,
   autoComplete,
   required,
-}: PasswordFieldProps) {
+}: PasswordFieldProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleButton = (
@@ -40,7 +35,4 @@ function PasswordField({
       endAdornment={toggleButton}
     />
   );
-}
-
-export { PasswordField };
-
+};

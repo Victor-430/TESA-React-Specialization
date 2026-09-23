@@ -7,21 +7,17 @@ import { FormField } from "@/components/FormField";
 import { PasswordField } from "@/components/PasswordField";
 import { SubmitButton } from "@/components/SubmitButton";
 import { loginSchema } from "@/lib/validations";
-
-interface LoginValues {
-  email: string;
-  password: string;
-}
+import type { LoginValues } from "@/types";
 
 const initialValues: LoginValues = {
   email: "",
   password: "",
 };
 
-function LoginPage() {
+export const LoginPage = () => {
   const navigate = useNavigate();
 
-  const handleSubmit = async (_values: LoginValues) => {
+  const handleSubmit = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     toast.success("Signed in successfully!");
@@ -79,7 +75,4 @@ function LoginPage() {
       </Formik>
     </AuthLayout>
   );
-}
-
-export default LoginPage;
-
+};

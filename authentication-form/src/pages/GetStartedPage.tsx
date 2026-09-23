@@ -6,13 +6,7 @@ import { AuthLayout } from "@/layouts/AuthLayout";
 import { FormField } from "@/components/FormField";
 import { SubmitButton } from "@/components/SubmitButton";
 import { getStartedSchema } from "@/lib/validations";
-
-interface GetStartedValues {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
+import type { GetStartedValues } from "@/types";
 
 const initialValues: GetStartedValues = {
   firstName: "",
@@ -21,7 +15,7 @@ const initialValues: GetStartedValues = {
   password: "",
 };
 
-function GetStartedPage() {
+export const GetStartedPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (values: GetStartedValues) => {
@@ -89,7 +83,4 @@ function GetStartedPage() {
       </Formik>
     </AuthLayout>
   );
-}
-
-export default GetStartedPage;
-
+};

@@ -4,13 +4,9 @@ import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import type { SubmitButtonProps } from "@/types";
 
-interface SubmitButtonProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-function SubmitButton({ children, className }: SubmitButtonProps) {
+export const SubmitButton = ({ children, className }: SubmitButtonProps) => {
   const { isSubmitting, isValid, dirty } = useFormikContext();
   const isDisabled = isSubmitting || !isValid || !dirty;
 
@@ -36,7 +32,4 @@ function SubmitButton({ children, className }: SubmitButtonProps) {
       </Button>
     </motion.div>
   );
-}
-
-export { SubmitButton };
-
+};

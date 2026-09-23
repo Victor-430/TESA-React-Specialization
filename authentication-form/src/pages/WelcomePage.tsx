@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { Logo } from "@/components/Logo";
 
-function WelcomePage() {
+export const WelcomePage = () => {
   return (
     <div className="relative grid min-h-screen place-items-center bg-white px-5 text-foreground">
       <Link
@@ -45,4 +45,3 @@ function WelcomePage() {
   );
 }
 
-export default WelcomePage;
