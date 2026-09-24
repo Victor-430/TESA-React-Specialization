@@ -7,7 +7,6 @@ import { useAuth } from "../context";
 export function Navbar() {
   const routeChecker = useMatch("/login");
 
-  
   const { user, isAuthenticated, logout } = useAuth();
 
   const handleLogout = () => {
@@ -33,13 +32,13 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               {routeChecker ? (
                 <Link to="/get-started">
-                  <Button variant="primary" size="lg">
+                  <Button variant="primary" size="md">
                     Get Started
                   </Button>
                 </Link>
               ) : (
                 <Link to="/login">
-                  <Button variant="ghost" size="lg">
+                  <Button variant="ghost" size="md">
                     Login
                   </Button>
                 </Link>

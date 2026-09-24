@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { RootLayout } from "../layouts/RootLayout";
 import { GetStartedPage } from "../pages/GetStartedPage";
 import { LoginPage } from "../pages/LoginPage";
@@ -12,6 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <Navigate to="/login" replace />,
       },
       {
         path: "get-started",

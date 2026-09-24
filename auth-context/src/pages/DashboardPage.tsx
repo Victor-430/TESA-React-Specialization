@@ -51,9 +51,7 @@ export function DashboardPage() {
                   <div className="text-2xl font-bold text-[#010101]">
                     ₦150,000
                   </div>
-                  <p className="text-xs text-zinc-500 mt-1">
-                    Available balance
-                  </p>
+                  <p className="text-xs text-zinc-500 mt-1">Available balance</p>
                 </CardContent>
               </Card>
 

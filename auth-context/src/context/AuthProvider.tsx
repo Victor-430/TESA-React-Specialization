@@ -1,4 +1,4 @@
-import { useState,type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import type { User } from "../types/auth";
 import { AuthContext } from "./AuthContext";
 
@@ -10,6 +10,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
 
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (user) {
+      console.log(`Dashboard - ${user.email}`);
+    } 
+  }, [user]);
 
   const login = (userData: {
     email: string;
