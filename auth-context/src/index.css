@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #010101;
+  --background: #ffffff;
+  --foreground: #010101;
+}
+
+body {
+  background-color: #fafafa;
+  color: #010101;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure no animations per prompt requirement */
+*, *::before, *::after {
+  animation: none !important;
+  transition-duration: 0.1s !important;
+}
+
