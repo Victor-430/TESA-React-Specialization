@@ -10,6 +10,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
+      // public route
       {
         index: true,
         element: <Navigate to="/login" replace />,
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
         path: "login",
         element: <LoginPage />,
       },
+      // private route
       {
         path: "dashboard",
         element: (

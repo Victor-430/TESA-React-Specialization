@@ -5,7 +5,39 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/Card";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../components/ui/Table";
 import { Wallet, ArrowLeftRight, TrendingUp, Mail } from "lucide-react";
+
+interface Transaction {
+  id: string;
+  type: string;
+  date: string;
+  status: "Completed" | "Pending";
+  amount: number;
+}
+
+const recentTransactions: Transaction[] = [
+  { id: "txn-012", type: "Transfer", date: "29 Sep 2026", status: "Completed", amount: -15000 },
+  { id: "txn-011", type: "Dividend", date: "28 Sep 2026", status: "Completed", amount: 25000 },
+  { id: "txn-010", type: "Deposit", date: "27 Sep 2026", status: "Completed", amount: 150000 },
+  { id: "txn-009", type: "Investment", date: "26 Sep 2026", status: "Pending", amount: -10000 },
+];
+
+const amountFormatter = new Intl.NumberFormat("en-NG", {
+  style: "currency",
+  currency: "NGN",
+  signDisplay: "always",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
 
 export function DashboardPage() {
   const { user } = useAuth();
@@ -87,6 +119,40 @@ export function DashboardPage() {
                 </CardContent>
               </Card>
             </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="border-b border-zinc-100 pb-4">
+            <CardTitle id="recent-activity-title">Recent Activity</CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            <Table className="min-w-135" aria-labelledby="recent-activity-title">
+              <TableCaption>
+                 4 of 12 transactions this month.
+              </TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead scope="col">Transaction</TableHead>
+                  <TableHead scope="col">Date</TableHead>
+                  <TableHead scope="col">Status</TableHead>
+                  <TableHead scope="col" className="text-right">Amount</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {recentTransactions.map((transaction) => (
+                  <TableRow key={transaction.id}>
+                    <TableCell className="font-medium">{transaction.type}</TableCell>
+                    <TableCell className="whitespace-nowrap text-zinc-600">
+                      {transaction.date}
+                    </TableCell>
+                    <TableCell className="text-zinc-600">{transaction.status}</TableCell>
+                    <TableCell className="whitespace-nowrap text-right tabular-nums">
+                      {amountFormatter.format(transaction.amount)}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
           </CardContent>
         </Card>
       </div>
