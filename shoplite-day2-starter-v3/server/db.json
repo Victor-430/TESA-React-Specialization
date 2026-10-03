@@ -1,0 +1,170 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Wireless Earbuds",
+      "price": 39.99,
+      "description": "Bluetooth earbuds with a charging case and up to 20 hours of battery.",
+      "category": "electronics",
+      "image": "/images/product-1.svg"
+    },
+    {
+      "id": 2,
+      "title": "Smart Watch",
+      "price": 89.5,
+      "description": "Tracks steps, heart rate and sleep, with a 5-day battery.",
+      "category": "electronics",
+      "image": "/images/product-2.svg"
+    },
+    {
+      "id": 3,
+      "title": "Portable Speaker",
+      "price": 45.0,
+      "description": "Water-resistant speaker with deep bass for outdoor use.",
+      "category": "electronics",
+      "image": "/images/product-3.svg"
+    },
+    {
+      "id": 4,
+      "title": "Power Bank 20000mAh",
+      "price": 29.99,
+      "description": "Charges two phones at once. Fast charging supported.",
+      "category": "electronics",
+      "image": "/images/product-4.svg"
+    },
+    {
+      "id": 5,
+      "title": "USB-C Laptop Charger",
+      "price": 34.75,
+      "description": "65W charger that works with most USB-C laptops and phones.",
+      "category": "electronics",
+      "image": "/images/product-5.svg"
+    },
+    {
+      "id": 6,
+      "title": "Gold Hoop Earrings",
+      "price": 24.99,
+      "description": "Lightweight gold-plated hoops for everyday wear.",
+      "category": "jewelery",
+      "image": "/images/product-6.svg"
+    },
+    {
+      "id": 7,
+      "title": "Silver Chain Necklace",
+      "price": 32.0,
+      "description": "Sterling silver chain, 45cm, with a lobster clasp.",
+      "category": "jewelery",
+      "image": "/images/product-7.svg"
+    },
+    {
+      "id": 8,
+      "title": "Beaded Bracelet",
+      "price": 12.5,
+      "description": "Handmade bracelet with coloured glass beads.",
+      "category": "jewelery",
+      "image": "/images/product-8.svg"
+    },
+    {
+      "id": 9,
+      "title": "Diamond Stud Earrings",
+      "price": 149.99,
+      "description": "Classic studs with lab-grown diamonds.",
+      "category": "jewelery",
+      "image": "/images/product-9.svg"
+    },
+    {
+      "id": 10,
+      "title": "Classic Wristwatch",
+      "price": 74.0,
+      "description": "Leather strap watch with a minimalist dial.",
+      "category": "jewelery",
+      "image": "/images/product-10.svg"
+    },
+    {
+      "id": 11,
+      "title": "Cotton T-Shirt",
+      "price": 15.99,
+      "description": "Soft 100% cotton crew-neck tee.",
+      "category": "men's clothing",
+      "image": "/images/product-11.svg"
+    },
+    {
+      "id": 12,
+      "title": "Slim Fit Jeans",
+      "price": 42.5,
+      "description": "Stretch denim jeans with a modern slim fit.",
+      "category": "men's clothing",
+      "image": "/images/product-12.svg"
+    },
+    {
+      "id": 13,
+      "title": "Hooded Jacket",
+      "price": 59.99,
+      "description": "Lightweight jacket with a hood, ideal for rainy days.",
+      "category": "men's clothing",
+      "image": "/images/product-13.svg"
+    },
+    {
+      "id": 14,
+      "title": "Leather Sneakers",
+      "price": 64.0,
+      "description": "Everyday white leather sneakers.",
+      "category": "men's clothing",
+      "image": "/images/product-14.svg"
+    },
+    {
+      "id": 15,
+      "title": "Laptop Backpack",
+      "price": 49.95,
+      "description": "Fits laptops up to 15 inches, with a padded sleeve.",
+      "category": "men's clothing",
+      "image": "/images/product-15.svg"
+    },
+    {
+      "id": 16,
+      "title": "Summer Dress",
+      "price": 38.0,
+      "description": "Flowy midi dress in breathable fabric.",
+      "category": "women's clothing",
+      "image": "/images/product-16.svg"
+    },
+    {
+      "id": 17,
+      "title": "Denim Jacket",
+      "price": 54.99,
+      "description": "Classic blue denim jacket with button front.",
+      "category": "women's clothing",
+      "image": "/images/product-17.svg"
+    },
+    {
+      "id": 18,
+      "title": "Silk Scarf",
+      "price": 19.5,
+      "description": "Printed silk scarf that can be worn many ways.",
+      "category": "women's clothing",
+      "image": "/images/product-18.svg"
+    },
+    {
+      "id": 19,
+      "title": "High Heels",
+      "price": 69.0,
+      "description": "Comfortable block heels for work or events.",
+      "category": "women's clothing",
+      "image": "/images/product-19.svg"
+    },
+    {
+      "id": 20,
+      "title": "Handbag",
+      "price": 79.99,
+      "description": "Structured leather handbag with a shoulder strap.",
+      "category": "women's clothing",
+      "image": "/images/product-20.svg"
+    }
+  ],
+  "categories": [
+    "electronics",
+    "jewelery",
+    "men's clothing",
+    "women's clothing"
+  ]
+}
